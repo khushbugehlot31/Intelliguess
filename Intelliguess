@@ -1,0 +1,84 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+static int a;
+static int s=1;
+int x,n1,n2,n3,n4;
+void screentwo();
+void screenthree();
+void screenfour();
+void screenfive();
+void screensix();
+void screenone()
+{
+int i;
+setcolor(12);
+settextstyle(1,0,4);
+outtextxy(50,170,"Select a number between 1 to 14");
+outtextxy(170,270,"Keep it as a secret");
+getch();
+cleardevice();
+screentwo();
+}
+void screentwo()
+{
+settextstyle(1,0,2);
+outtextxy(135,70,"Is the choosen number present here?");
+settextstyle(10,0,3);
+setcolor(15);
+outtextxy(400,100,"1");
+outtextxy(40,160,"3");
+outtextxy(250,190,"5");
+outtextxy(550,220,"7");
+outtextxy(350,250,"9");
+outtextxy(200,280,"11");
+outtextxy(100,310,"13");
+settextstyle(1,0,2);
+setcolor(12);
+outtextxy(185,370,"If yes press Y, if no press N");
+x=getch();
+if(x==89||x==121)
+{
+a=1;
+}
+else
+{
+a=0;
+}
+n1=a;
+n1=n1*1;
+getch();
+cleardevice();
+screenthree();
+}
+void screenthree()
+{
+outtextxy(135,70,"Is the choosen number present here?");
+settextstyle(10,0,3);
+setcolor(15);
+outtextxy(50,130,"2");
+outtextxy(40,160,"3");
+outtextxy(250,190,"6");
+outtextxy(550,220,"7");
+outtextxy(350,250,"10");
+outtextxy(200,280,"11");
+outtextxy(100,310,"14");
+settextstyle(1,0,2);
+setcolor(12);
+outtextxy(185,370,"If yes press Y, if no press N");
+x=getch();
+if(x==89||x==121)
+{
+a=1;
+}
+else
+{
+a=0;
+}
+n1=a;
+n1=n1*1;
+getch();
+cleardevice();
+screenthree();
+}
