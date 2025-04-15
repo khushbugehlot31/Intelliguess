@@ -16,7 +16,9 @@ int i;
 setcolor(12);
 settextstyle(1,0,4);
 outtextxy(50,170,"Select a number between 1 to 14");
-outtextxy(170,270,"Keep it as a secret");
+outtextxy(170,270,"keep it as a secret");
+//printf("%d\n",a);
+//printf("%d\n",s);
 getch();
 cleardevice();
 screentwo();
@@ -46,8 +48,12 @@ else
 {
 a=0;
 }
+//printf("%d\n",a);
+//s=a;
+//printf("%d\n",s);
 n1=a;
 n1=n1*1;
+//printf("%d\n",n1);
 getch();
 cleardevice();
 screenthree();
@@ -58,15 +64,15 @@ outtextxy(135,70,"Is the choosen number present here?");
 settextstyle(10,0,3);
 setcolor(15);
 outtextxy(50,130,"2");
-outtextxy(40,160,"3");
-outtextxy(250,190,"6");
-outtextxy(550,220,"7");
-outtextxy(350,250,"10");
-outtextxy(200,280,"11");
-outtextxy(100,310,"14");
+outtextxy(400,160,"3");
+outtextxy(270,190,"6");
+outtextxy(600,220,"7");
+outtextxy(150,250,"10");
+outtextxy(500,280,"11");
+outtextxy(300,310,"14");
 settextstyle(1,0,2);
 setcolor(12);
-outtextxy(185,370,"If yes press Y, if no press N");
+outtextxy(185,370,"If yes press y, if no press n");
 x=getch();
 if(x==89||x==121)
 {
@@ -76,9 +82,103 @@ else
 {
 a=0;
 }
-n1=a;
-n1=n1*1;
+//printf("%d\n",a);
+//s=s*10+a;
+//printf("%d\n",s);
+n2=a;
+n2=n2*2;
+//printf("%d\n",n2);
 getch();
 cleardevice();
-screenthree();
+screenfour();
+}
+void screenfour()
+{
+outtextxy(135,70,"Is the choosen number present here?");
+settextstyle(10,0,3);
+setcolor(15);
+outtextxy(260,130,"4");
+outtextxy(30,160,"5");
+outtextxy(550,190,"6");
+outtextxy(400,220,"7");
+outtextxy(150,250,"12");
+outtextxy(450,280,"13");
+outtextxy(50,310,"14");
+settextstyle(1,0,2);
+setcolor(12);
+outtextxy(185,370,"If yes press y, if no press n");
+x=getch();
+if(x==89||x==121)
+{
+a=1;
+}
+else
+{
+a=0;
+}
+//printf("%d\n",a);
+//s=s*10+a;
+//printf("%d\n",s);
+n3=a;
+n3=n3*4;
+//printf("%d\n",n3);
+getch();
+cleardevice();
+screenfive();
+}
+void screenfive()
+{
+outtextxy(135,70,"Is the choosen number present here?");
+settextstyle(10,0,3);
+setcolor(15);
+outtextxy(550,130,"8");
+outtextxy(30,160,"9");
+outtextxy(250,190,"10");
+outtextxy(450,220,"11");
+outtextxy(100,250,"12");
+outtextxy(380,280,"13");
+outtextxy(190,310,"14");
+settextstyle(1,0,2);
+setcolor(12);
+outtextxy(185,370,"If yes press y, if no press n");
+x=getch();
+if(x==89||x==121)
+{
+a=1;
+}
+else
+{
+a=0;
+}
+//printf("%d\n",a);
+//s=s*10+a;
+//printf("%d\n",s);
+n4=a;
+n4=n4*8;
+//printf("%d\n",n4);
+getch();
+cleardevice();
+screensix();
+}
+void screensix()
+{
+int final;
+char b[2];
+settextstyle(1,0,3);
+outtextxy(150,100,"Your selected number is. . . . .");
+final=n1+n2+n3+n4;
+setcolor(15);
+settextstyle(4,0,10);
+sprintf(b,"%d",final);
+outtextxy(300,200,b);
+//printf("%d",final);
+}
+void main()
+{
+clrscr();
+int a=DETECT;
+int b;
+initgraph(&a,&b," ");
+screenone();
+getch();
 }
